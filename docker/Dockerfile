@@ -1,5 +1,7 @@
 FROM debian:11-slim
 
+# ARG APP_PATH
+
 # Realtime output to terminal
 ENV PYTHONUNBUFFERED=1 \
   # No Bytecode (.pyc)
@@ -58,10 +60,10 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -
 
 WORKDIR /app
 
-COPY . .
+COPY ../ .
 
 RUN direnv allow
 
 EXPOSE 8000
 
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+ENTRYPOINT ["./django-launcher.sh"]

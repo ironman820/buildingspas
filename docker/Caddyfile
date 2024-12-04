@@ -1,0 +1,12 @@
+http://hello.localhost {
+  root * /app
+  @notStatic {
+    not path /static/* /media/*
+  }
+  reverse_proxy @notStatic python:8000
+  file_server
+}
+
+http://webmail.localhost {
+  reverse_proxy mailhog:8025
+}
