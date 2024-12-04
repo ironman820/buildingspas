@@ -122,6 +122,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
+STATICFILES_DIR = [
+    "node_modules/htmx.org/dist",
+]
+
 STATIC_ROOT = os.environ.get("STATIC_ROOT")
 STATIC_URL = os.environ.get("STATIC_URL")
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
