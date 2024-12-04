@@ -32,12 +32,14 @@ ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", default="hello.localhost").split
 # Application definition
 
 INSTALLED_APPS = [
+    "channels",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "app.simple_app",
 ]
 
 MIDDLEWARE = [
