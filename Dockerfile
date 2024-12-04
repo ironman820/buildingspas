@@ -47,14 +47,14 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | b
   . "$NVM_DIR/bash_completion" && \
   nvm install 22
 
-# COPY rcm-env.yml rcm-env.yml
+COPY spas.yml spas.yml
 
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O conda.sh && \
   chmod +x conda.sh && \
   ./conda.sh -b && \
   . /home/vscode/miniconda3/bin/activate && \
-  conda create -n spas python=3.10
-# conda env create -f rcm-env.yml -n rcm-env
+  # conda create -n spas python=3.10
+  conda env create -f spas.yml
 
 WORKDIR /app
 
