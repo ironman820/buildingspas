@@ -1,5 +1,5 @@
 http://hello.localhost {
-  root * /app
+  root * /app/
   @notStatic {
     not path /static/* /media/*
   }
