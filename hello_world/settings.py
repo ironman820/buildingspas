@@ -150,3 +150,5 @@ CHANNEL_LAYERS = {
         },
     },
 }
+
+ASGI_APPLICATION = "hello_world.asgi.application"
