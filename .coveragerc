@@ -1,0 +1,10 @@
+[run]
+command_line = manage.py test
+omit = 
+    __init__.py
+    manage.py
+    *sgi.py
+source = /data/rcm
+
+[xml]
+output = coverage-reports/coverage-rcm.xml

@@ -1,0 +1,25 @@
+services:
+  python:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app/
+      - ~/.ssh:/home/vscode/.ssh:ro
+#   db:
+#     image: postgres:17-bullseye
+#     restart: always
+#     shm_size: 2gb
+#     volumes:
+#       - postgres:/var/lib/postgresql/data
+#     environment:
+#       POSTGRES_USER: rcm
+#       POSTGRES_PASSWORD: upsroyer
+#       POSTGRES_DB: rcm
+#     ports:
+#       - 5432:5432
+
+# volumes:
+#   postgres:
