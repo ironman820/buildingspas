@@ -12,7 +12,7 @@ import os
 from channels.auth import AuthMiddlewareStack
 from channels.routing import ProtocolTypeRouter, URLRouter
 from django.core.asgi import get_asgi_application
-from django.urls import path
+from django.urls import re_path
 from app.simple_app.consumers import EchoConsumer
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hello_world.settings")
@@ -23,7 +23,7 @@ application = ProtocolTypeRouter(
         "websocket": AuthMiddlewareStack(
             URLRouter(
                 [
-                    path("ws/echo/", EchoConsumer.as_asgi()),
+                    re_path("^ws/echo/$", EchoConsumer.as_asgi()),
                 ]
             )
         ),
