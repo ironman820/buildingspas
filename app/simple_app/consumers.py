@@ -6,7 +6,7 @@ class EchoConsumer(WebsocketConsumer):
         """Event when client connects"""
 
         self.accept()
-        self.send(text_data="You are connected by Websockets!")
+        self.send(text_data='<h2 id="welcome">You are connected by Websockets!</h2>')
 
     def disconnect(self, close_code):
         """Event when client disconnects"""

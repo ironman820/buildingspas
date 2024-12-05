@@ -18,6 +18,7 @@ RUN apt-get update && \
   curl \
   direnv \
   git \
+  neovim \
   postgresql \
   postgresql-contrib \
   ssh \
@@ -55,8 +56,8 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -
   chmod +x conda.sh && \
   ./conda.sh -b && \
   . /home/vscode/miniconda3/bin/activate && \
-  # conda create -n spas python=3.10
-  conda env create -f spas.yml
+  conda create -n spas python=3.10
+# conda env create -f spas.yml
 
 WORKDIR /app
 
@@ -66,4 +67,5 @@ RUN direnv allow
 
 EXPOSE 8000
 
-ENTRYPOINT ["./django-launcher.sh"]
+# ENTRYPOINT ["./django-launcher.sh"]
+ENTRYPOINT [ "tail", "-f", "/dev/zero" ]

@@ -32,13 +32,13 @@ ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", default="hello.localhost").split
 # Application definition
 
 INSTALLED_APPS = [
-    "channels",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "channels",
     "app.simple_app",
 ]
 
@@ -148,7 +148,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CHANNEL_LAYERS = {
     "default": {
-        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "BACKEND": "channels.layers.RedisChannelLayer",
         "CONFIG": {
             "hosts": [(os.environ.get("REDIS_HOST"), os.environ.get("REDIS_PORT"))],
         },

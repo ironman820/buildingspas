@@ -7,10 +7,10 @@ dependencies:
   - _libgcc_mutex=0.1=main
   - _openmp_mutex=5.1=1_gnu
   - asgiref=3.8.1=py310h06a4308_0
+  - attrs=24.2.0=py310h06a4308_0
   - bzip2=1.0.8=h5eee18b_6
   - ca-certificates=2024.11.26=h06a4308_0
   - cyrus-sasl=2.1.28=h52b45da_1
-  - django=5.1.3=py310h06a4308_0
   - freetype=2.12.1=h4a9f257_0
   - jpeg=9e=h5eee18b_3
   - krb5=1.20.1=h143b758_1
@@ -50,7 +50,6 @@ dependencies:
   - zstd=1.5.6=hc292b87_0
   - pip:
       - async-timeout==5.0.1
-      - attrs==24.2.0
       - autobahn==24.4.2
       - automat==24.8.1
       - cffi==1.17.1

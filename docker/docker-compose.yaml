@@ -8,7 +8,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - .:/app/
+      - ..:/app/
       - ~/.ssh:/home/vscode/.ssh:ro
     depends_on:
       - db
@@ -35,7 +35,7 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - .:/app/
+      - ..:/app/
       - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
     depends_on:
