@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "channels",
-    "channels_redis",
     "app.simple_app",
 ]
 
