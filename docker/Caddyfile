@@ -1,4 +1,4 @@
-http://hello.localhost {
+hello.localhost:80 {
   root * /app/
   @notStatic {
     not path /static/* /media/*
