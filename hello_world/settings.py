@@ -32,8 +32,8 @@ ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", default="hello.localhost").split
 # Application definition
 
 INSTALLED_APPS = [
-    "daphne",
     "channels",
+    "daphne",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
