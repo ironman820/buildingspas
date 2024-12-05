@@ -10,8 +10,14 @@
 </head>
 <body>
   <h1>Hello Django!</h1>
-  <div hx-ext="ws" ws-connect="/ws/echo/">
+  {% comment %} <div hx-ext="ws" ws-connect="/ws/echo/"> {% endcomment %}
     <h2 id="welcome"></h2>
-  </div>
+  {% comment %} </div> {% endcomment %}
+  <script>
+    const myWebSocket = new WebSocket("ws://{{ request.get_host }}/ws/echo/");
+    myWebSocket.addEventListener("message", (event) => {
+      document.querySelector("#welcome").textContent = event.data;
+    });
+  </script>
 </body>
 </html>
